@@ -51,7 +51,7 @@ public abstract class Shape implements Drawable{
                     if (shape instanceof Circle) {
                         sum += shape.calcArea();
                     }
-                System.out.printf("Sum of triangle: %5.2f\n",sum);
+                System.out.printf("Sum of circle: %5.2f\n",sum);
                 break;
             case "triangle":
                 for (Shape shape : shapes)
