@@ -19,7 +19,7 @@ public class Main {
         //1
         shape.printShapes(shapes);
         //2
-        shape.AreaOfAllShapes(shapes);
+        System.out.printf("Sum areas: %1.2f\n", shape.AreaOfAllShapes(shapes));
         // 3
         shape.areaOfSpecificShapes(shapes);
         // 4
@@ -28,7 +28,7 @@ public class Main {
         shape.printShapes(shapes);
         // 5
         Arrays.sort(shapes, new SortByColor());
-        System.out.println("Sort by Color ");
+        System.out.println("Sort by color ");
         shape.printShapes(shapes);
 
 

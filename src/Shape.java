@@ -34,7 +34,6 @@ public abstract class Shape implements Drawable{
     public double AreaOfAllShapes(Shape[] shapes) {
         double sum = 0;
         for (Shape shape : shapes) {
-            shape.draw();
             sum += shape.calcArea();
         }
         return sum;
