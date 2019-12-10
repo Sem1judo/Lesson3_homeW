@@ -1,3 +1,5 @@
+package Task_1;
+
 public class Rectangle extends Shape {
     private double w;
     private double h;

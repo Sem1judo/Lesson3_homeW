@@ -1,10 +1,9 @@
-import java.util.Comparator;
+package Task_1;
+
 import java.util.Scanner;
 
-public abstract class Shape implements Drawable{
+public abstract class Shape implements Drawable {
     private String colorShape;
-
-
 
     public Shape(String colorShape) {
         this.colorShape = colorShape;

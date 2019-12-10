@@ -1,3 +1,5 @@
+package Task_1;
+
 import java.util.Comparator;
 
 public class SortByColor implements Comparator {

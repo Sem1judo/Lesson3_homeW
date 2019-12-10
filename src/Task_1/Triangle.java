@@ -1,3 +1,5 @@
+package Task_1;
+
 public class Triangle extends Shape {
 
     private  double base;
