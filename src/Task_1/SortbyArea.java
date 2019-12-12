@@ -1,8 +1,10 @@
 package Task_1;
 
+import Task_1.model.entity.Shape;
+
 import java.util.Comparator;
 
-class SortbyArea implements Comparator {
+public class SortbyArea implements Comparator {
 
     @Override
     public int compare(Object o1, Object o2) {

@@ -1,4 +1,4 @@
-package Task_1;
+package Task_1.model.entity;
 
 public class Triangle extends Shape {
 
@@ -17,8 +17,8 @@ public class Triangle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.printf("%s; area=%.2f\n", this, calcArea());
+    public String draw() {
+        return super.draw();
 
     }
 

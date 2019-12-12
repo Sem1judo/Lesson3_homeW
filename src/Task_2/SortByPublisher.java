@@ -1,5 +1,7 @@
 package Task_2;
 
+import Task_2.model.entity.Book;
+
 import java.util.Comparator;
 
 public class SortByPublisher implements Comparator {

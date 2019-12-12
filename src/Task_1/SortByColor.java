@@ -1,5 +1,7 @@
 package Task_1;
 
+import Task_1.model.entity.Shape;
+
 import java.util.Comparator;
 
 public class SortByColor implements Comparator {

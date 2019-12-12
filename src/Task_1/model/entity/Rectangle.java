@@ -1,4 +1,4 @@
-package Task_1;
+package Task_1.model.entity;
 
 public class Rectangle extends Shape {
     private double w;
@@ -22,7 +22,7 @@ public class Rectangle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.printf("%s; area=%.2f\n", this, calcArea());
+    public String draw() {
+        return super.draw();
     }
 }

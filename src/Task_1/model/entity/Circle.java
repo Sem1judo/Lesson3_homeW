@@ -1,4 +1,4 @@
-package Task_1;
+package Task_1.model.entity;
 
 public class Circle extends Shape {
     private double r;
@@ -14,8 +14,8 @@ public class Circle extends Shape {
     }
 
     @Override
-    public void draw() {
-        System.out.printf("%s; area=%.2f\n", this, calcArea());
+    public String  draw() {
+        return super.draw();
     }
 
     @Override
