@@ -3,6 +3,8 @@ package Task_2.model;
 import Task_2.SortByPublisher;
 import Task_2.model.entity.Book;
 
+
+import java.util.*;
 import java.util.Arrays;
 import java.util.Comparator;
 
@@ -20,27 +22,28 @@ public class BookModel {
 
 
     public Book[] getSpecificBook(String s) {
+        List<Book> booksList = new ArrayList<>();
         for (Book book : books) {
             if (s.equalsIgnoreCase(book.getAuthor()) ||
                     s.equalsIgnoreCase(book.getPublisher())) {
-
+                booksList.add(book);
             }
         }
+        return booksList.toArray(new Book[booksList.size()]);
 
     }
 
-    public Book[] getSpecificBook(int year) {
-        Book[] newBook = null;
+    public Book[] getSpecificBooktillYear(int year) {
+        List<Book> booksList = new ArrayList<>();
         for (Book book : books) {
             if (book.getYear() >= year) {
-                int i = 0;
-                newBook[i++] = book;
+                booksList.add(book);
             }
         }
-        return newBook;
+        return booksList.toArray(new Book[booksList.size()]);
     }
 
-    public Book[] sortShape() {
+    public Book[] sortBook(Book[] books) {
         Book[] newBook = Arrays.copyOf(books, books.length);
         Arrays.sort(newBook, new SortByPublisher());
         return newBook;
