@@ -1,5 +1,6 @@
 package Task_1.model;
 
+import Task_1.model.entity.Circle;
 import Task_1.model.entity.Shape;
 
 import java.util.Arrays;
@@ -39,4 +40,6 @@ public class ShapeModel {
         return newShapes;
 
     }
+
+
 }

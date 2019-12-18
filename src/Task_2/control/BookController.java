@@ -16,7 +16,7 @@ public class BookController {
 
         view.viewData(ConvertToString.convertArray(model.getBooks()));
 
-        view.viewData("Enter what you want to look up -> exist search by author, publisher or search by year");
+        view.viewData("Enter what you want to look up -> exist: search by author, publisher or search by year");
         String specific = InputData.input();
 
          if (specific.matches("[-+]?\\d+")) {

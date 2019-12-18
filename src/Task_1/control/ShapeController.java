@@ -1,7 +1,5 @@
 package Task_1.control;
 
-import Task_1.SortByColor;
-import Task_1.SortbyArea;
 import Task_1.model.ShapeModel;
 import Task_1.model.entity.Shape;
 import Task_1.view.InputData;
@@ -30,18 +28,29 @@ public class ShapeController {
         Comparator comparator = null;
         switch (criteria) {
             case "area": {
-                comparator = new SortbyArea();
+                comparator = (o1, o2) -> {
+                    Shape shape1 = (Shape) o1;
+                    Shape shape2 = (Shape) o2;
+                    return (int) (shape1.calcArea() - shape2.calcArea());
+                };
                 break;
             }
             case "color": {
-                comparator = new SortByColor();
+                comparator = new Comparator<Shape>() {
+                    @Override
+                    public int compare(Shape o1, Shape o2) {
+                        return o1.getColorShape().compareTo(o2.getColorShape());
+                    }
+                };
                 break;
             }
         }
 
         if (comparator != null) {
             view.viewData(ConverterInString.convertArrayShapes(model.sortShape(comparator)));
-        } else {view.viewData("Invalid criteria");}
+        } else {
+            view.viewData("Invalid criteria");
+        }
 
 
     }
