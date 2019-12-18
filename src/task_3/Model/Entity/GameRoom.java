@@ -24,7 +24,7 @@ public class GameRoom<T> {
         return toys;
     }
 
-    public double average() {
+    public double sum() {
         double sum = 0.0;
         for (Toy toy : toys) {
             sum += toy.getPrice();
@@ -34,6 +34,11 @@ public class GameRoom<T> {
 
     }
 
+    public Toy[] sortToy(Comparator comparator) {
+        Toy[] newArr = Arrays.copyOf(toys, toys.length);
+        Arrays.sort(newArr, comparator);
+        return newArr;
+    }
 
 
     public static void main(String[] args) {
@@ -63,21 +68,11 @@ public class GameRoom<T> {
         toyGameRoom.add(toyGameRoom.toys.length, toy10);
 
 
+        System.out.println("This is total price: " + toyGameRoom.sum());
         System.out.println(Arrays.toString(toyGameRoom.toys));
-
-
     }
 
 }
-
-//    public int SortByMaterial(T t1, T t2) {
-//        return t1. ().compareTo(t2.getMaterial());
-//    }
-//
-//    public int SortByPrice(T t1, T t2) {
-//        return (int) (getPrice() - getPrice());
-//
-//    }
 
 
 
