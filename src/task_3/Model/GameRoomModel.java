@@ -1,16 +1,14 @@
 package task_3.Model;
 
+import task_3.Model.Entity.GameRoom;
 import task_3.Model.Entity.Toy;
+
+import java.util.Arrays;
+import java.util.Comparator;
 
 public class GameRoomModel {
 
-    public static int SortByMaterial(Toy t1, Toy t2) {
-        return t1.getMaterial().compareTo(t2.getMaterial());
-    }
 
-    public  static  int SortByPrice(Toy t1, Toy t2) {
-        return (int) (t1.getPrice() - t2.getPrice());
-    }
 
     public static double sumOfToys(Toy[] toys) {
         int sum = 0;
@@ -18,5 +16,10 @@ public class GameRoomModel {
             sum += toy1.getPrice();
         }
         return sum;
+    }
+    public static Toy[] sortToy(Comparator comparator) {
+        Toy[] newArr = Arrays.copyOf(DataSourceGameRoom.getArrayToys(), DataSourceGameRoom.getArrayToys().length);
+        Arrays.sort(newArr, comparator);
+        return newArr;
     }
 }
