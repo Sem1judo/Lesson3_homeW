@@ -8,7 +8,7 @@ import java.util.*;
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class BookModel {
+public class BookModel<T> {
 
     private Book[] books;
 

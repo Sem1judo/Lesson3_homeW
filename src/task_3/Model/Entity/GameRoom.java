@@ -42,21 +42,6 @@ public class GameRoom<T> {
         return newArr;
     }
 
-
-    public static void main(String[] args) {
-
-        System.out.println("This is total price: " + GameRoomModel.sumOfToys(DataSourceGameRoom.getArrayToys()));
-        System.out.println("------------------------------");
-        System.out.println(Arrays.toString(DataSourceGameRoom.getArrayToys()));
-        System.out.println("------------------------------");
-        System.out.println(Arrays.toString(GameRoomModel.sortToy(new Comparator<Toy>() {
-            @Override
-            public int compare(Toy o1, Toy o2) {
-                return (int) (o1.getPrice() - o2.getPrice());
-            }
-        })));
-    }
-
 }
 
 
