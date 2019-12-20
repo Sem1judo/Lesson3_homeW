@@ -1,12 +1,10 @@
 package Task_2.model;
 
-import Task_2.SortByPublisher;
 import Task_2.model.entity.Book;
 
 
 import java.util.*;
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class BookModel<T> {
 
@@ -45,7 +43,14 @@ public class BookModel<T> {
 
     public Book[] sortBook(Book[] books) {
         Book[] newBook = Arrays.copyOf(books, books.length);
-        Arrays.sort(newBook, new SortByPublisher());
+        Arrays.sort(newBook, new Comparator<Book>() {
+            @Override
+            public int compare(Book o1, Book o2) {
+                String b1 = o1.getPublisher();
+                String b2 = o2.getPublisher();
+                return b1.compareTo(b2);
+            }
+        });
         return newBook;
     }
 }
