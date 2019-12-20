@@ -17,16 +17,15 @@ public class GameRoomModel {
         return toys;
     }
 
-//    public Toy rangeOfParametersInToys(String field, String field2){
-//        Toy[] toys1 = null;
-//        Toy toy = null;
-//        for (Toy toy: toys){
-//            if (toy.getMaterial().equalsIgnoreCase(field) && toy.getName().equalsIgnoreCase(field2)){
-//                toy.
-//            }
-//        }
-//
-//    }
+    public Toy[] rangeOfParametersInToys(String field, String field2) {
+        GameRoom<Toy> newToy = new GameRoom<>();
+        for (Toy toy : toys) {
+            if (toy.getName().equalsIgnoreCase(field) && toy.getMaterial().equalsIgnoreCase(field2)) {
+                newToy.add(newToy.getToys().length, toy);
+            }
+        }
+        return newToy.getToys();
+    }
 
 
     public double sumOfToys(Toy[] toys) {
@@ -38,8 +37,7 @@ public class GameRoomModel {
     }
 
 
-
-    public  Toy[] sortToy(Comparator comparator) {
+    public Toy[] sortToy(Comparator comparator) {
         Toy[] newArr = Arrays.copyOf(DataSourceGameRoom.getArrayToys(), DataSourceGameRoom.getArrayToys().length);
         Arrays.sort(newArr, comparator);
         return newArr;

@@ -6,6 +6,7 @@ import task_3.Model.Entity.GameRoom;
 import task_3.Model.Entity.Toy;
 import task_3.Model.GameRoomModel;
 import task_3.View.GameRoomView;
+import task_3.View.InputData;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -18,7 +19,15 @@ public class GameRoomController {
     public void run() {
 
         view.viewData(ConverterInString.convertArrayGameRoom(model.getToys()));
+        view.viewData("--------------------------");
+
         view.viewData(ConverterInString.convertDouble(model.sumOfToys(model.getToys()), "Total sum of toys"));
+        view.viewData("--------------------------");
+        view.viewData("Input name of desired toy: ");
+        String field1 = InputData.input();
+        view.viewData("Input material of desired toy: ");
+        String field2 = InputData.input();
+        view.viewData(ConverterInString.convertArrayGameRoom(model.rangeOfParametersInToys(field1, field2)));
         view.viewData("--------------------------");
         view.viewData(ConverterInString.convertArrayGameRoom(model.sortToy(new Comparator<Toy>() {
             @Override

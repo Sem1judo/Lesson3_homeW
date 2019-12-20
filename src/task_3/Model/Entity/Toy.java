@@ -4,6 +4,7 @@ public class Toy {
     private String name;
     private String material;
     private double price;
+    private double weight;
 
 
     public Toy() {
@@ -13,6 +14,7 @@ public class Toy {
         this.name = name;
         this.material = material;
         this.price = price;
+        this.weight = weight;
     }
 
     public String getName() {
@@ -41,7 +43,7 @@ public class Toy {
 
     @Override
     public String toString() {
-        return "Toy: " + "name=" + name + ", material=" + material+ ", price=" + price;
+        return "Toy: " + "name=" + name + ", material=" + material+ ", weight=" + weight +", price=" + price+ " | ";
 
     }
 }
