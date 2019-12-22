@@ -1,12 +1,12 @@
-package task_3.Control;
+package task_1.control;
 
-import task_3.Model.Entity.Toy;
+import task_1.model.entity.Shape;
 
 public class ConverterInString {
-    public static String convertArrayGameRoom(Toy[] shapes) {
+    public static String convertArrayShapes(Shape[] shapes) {
         String res = "";
-        for (Toy elem : shapes) {
-            res += elem.toString();
+        for (Shape elem : shapes) {
+            res += elem.draw();
         }
         return res;
     }
@@ -14,6 +14,5 @@ public class ConverterInString {
     public static String convertDouble(double value, String message){
         return String.format("%s = %.2f\n",message, value);
     }
-
 
 }
