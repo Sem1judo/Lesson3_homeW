@@ -36,11 +36,6 @@ public class GameRoom<T> {
         return toys;
     }
 
-    public Toy[] sortToy(Comparator comparator) {
-        Toy[] newArr = Arrays.copyOf(toys, toys.length);
-        Arrays.sort(newArr, comparator);
-        return newArr;
-    }
 
 }
 
