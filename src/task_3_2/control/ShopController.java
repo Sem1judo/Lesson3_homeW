@@ -14,7 +14,6 @@ public class ShopController {
     ShopView shopView = new ShopView();
 
     public void run() {
-
         shopView.viewData(ConvertToString.convertArrayDepartments(shopModel.getDepartments()));
         shopView.viewData("--------------------------");
         shopView.viewData("Please enter which Kind of product do you seek");
@@ -28,8 +27,6 @@ public class ShopController {
                 return (s1.compareTo(s2));
             }
         })));
-
-
     }
 
 
