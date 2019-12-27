@@ -17,7 +17,7 @@ public class Shop {
         public Department() {
         }
 
-        public Department(String name, String nameProduct, TypesOfGoods TypesOfGoods, String place) {
+        public Department(String name, String nameProduct, TypesOfGoods typeOfGoods, String place) {
             this.name = name;
             this.nameProduct = nameProduct;
             this.typeOfGoods = typeOfGoods;
@@ -58,7 +58,7 @@ public class Shop {
 
         @Override
         public String toString() {
-            return "Department:" +  "name=" + name + ", nameProduct=" + nameProduct + ", typeOfGoods=" + typeOfGoods + ", place=" + place + ". ";
+            return "Department : " + "name='" + name + '\'' + ", nameProduct='" + nameProduct + '\'' + ", typeOfGoods=" + typeOfGoods + ", place='" + place + '\'';
         }
     }
 
