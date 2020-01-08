@@ -13,12 +13,11 @@ public class RegisterModel<T> {
 
     public void addStudent(String name, String surname, String phone, String address) {
 
-
         Student student = new Student();
         if (firstName(name)) {
             student.setFirstName(name);
         } else {
-            System.out.println("Incorrect  first name");
+            System.out.println("Incorrect first name");
         }
         if (lastName(surname)) {
             student.setLastName(surname);

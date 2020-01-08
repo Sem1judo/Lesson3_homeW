@@ -22,8 +22,6 @@ public class Register<T> {
         this.obj = obj;
     }
 
-
-
     @Override
     public String toString() {
         return "Register{" +
