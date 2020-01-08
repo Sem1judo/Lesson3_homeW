@@ -25,12 +25,12 @@ public class run {
         System.out.println(list.size());
 
 
-        set.add(3);
-        set.add(4);
-        set.add(8);
-        set.add(4);
-        set.add(8);
-        set.add(1000);
+        set.add(22);
+        set.add(11);
+        set.add(22);
+        set.add(5);
+        set.add(12);
+        set.add(999);
         System.out.println("Size of set " + set.getSize());
 
     }
