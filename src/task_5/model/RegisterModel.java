@@ -17,7 +17,6 @@ public class RegisterModel<T> {
         Student student = new Student();
         if (firstName(name)) {
             student.setFirstName(name);
-
         } else {
             System.out.println("Incorrect  first name");
         }
@@ -34,30 +33,32 @@ public class RegisterModel<T> {
         } else System.out.println("Incorrect address");
 
         register.getObj().add(student);
-}
+    }
 
-public static boolean firstName(String firstName){
+    public static boolean firstName(String firstName) {
         return firstName.matches("[A-Z][a-z]*");
-        }
+    }
 
-public static boolean lastName(String lastName){
+    public static boolean lastName(String lastName) {
         return lastName.matches("[A-Z][a-z]*");
-        }
+    }
 
-public static boolean isValidMobileNumber(String s){
-        Pattern p=Pattern.compile("^[+]*[(]?[0-9]{1,4}[)]?[-\\s\\./0-9]*$");
+    public static boolean isValidMobileNumber(String phone) {
+        return (phone.matches("^\\+[\\(\\-]?(\\d[\\(\\)\\-]?){11}\\d$") ||
 
-        Matcher m=p.matcher(s);
-        return(m.find()&&m.group().equals(s));
-        }
+                phone.matches("^\\(?(\\d[\\-\\(\\)]?){9}\\d$")) &&
 
-public static boolean validateAddress(String address){
+                phone.matches("[\\+]?\\d*(\\(\\d{3}\\))?\\d*\\-?\\d*\\-?\\d*\\d$");
+    }
+
+
+    public static boolean validateAddress(String address) {
         return address.matches(
-        "^[#.0-9a-zA-Z\\s,-]+$");
-        }
+                "^[#.0-9a-zA-Z\\s,-]+$");
+    }
 
-public ArrayList<Student> printList(){
+    public ArrayList<Student> printList() {
         return register.getObj();
-        }
+    }
 
-        }
+}

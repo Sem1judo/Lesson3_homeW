@@ -32,8 +32,10 @@ public class RegisterController {
         view.view("Please input last name: ");
         String lastName1 = scan.next();
         view.view("Please input phone: ");
+        view.view("Pattern : +380968510255 or 0968510255 o ");
         String phone1 = scan.next();
         view.view("Please input address: ");
+        view.view("Pattern : You street. 3: ");
         String address1 = scan.next();
         model.addStudent(name1, lastName1, phone1, address1);
         view.view(ConverterInString.convertArrayListStudents(model.printList()));
