@@ -3,6 +3,7 @@ package task_2.model;
 import task_2.model.entity.Book;
 
 
+import java.io.*;
 import java.util.*;
 import java.util.Arrays;
 
@@ -53,4 +54,24 @@ public class BookModel<T> {
         });
         return newBook;
     }
+
+    public Book[] createFileBooks(Book[] books) throws IOException, ClassNotFoundException {
+        try (ObjectOutputStream oos = new ObjectOutputStream(
+                new FileOutputStream("D:\\Lesson3\\src\\task_2\\model\\entity\\Book.java")); ObjectInputStream ois =
+                     new ObjectInputStream(
+                             new FileInputStream("D:\\Lesson3\\src\\task_2\\model\\entity\\Book.java"))) {
+            oos.writeObject(books);
+            books = null;
+            Book[] ss = (Book[]) ois.readObject();
+            return ss;
+
+        } catch (IOException | ClassNotFoundException e) {
+
+            e.printStackTrace();
+        }
+        return null;
+
+    }
+
+
 }
